@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LightFont';
+    src: url('fonts/Coves\ Light.otf');
+}
+
+@font-face {
+    font-family: 'BoldFont';
+    src: url('fonts/Coves\ Bold.otf');
+}
+
+:root{
+    --fontlight:'LightFont', sans-serif;
+    --fontbold:'BoldFont', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontlight);   
+}
+
+.container-hour {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: suave 1.7s ease-in forwards 0.7s;
+
+}
+.Hour{
+    font-family: var(--fontbold);
+    font-size: 5em;
+    height: 13vh;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00ff00; 
+    transition: 0.7s;  
+}
+
+.Hour:hover{
+    text-shadow: 0 0 1.7em #00ff00;
+}
+
+.watch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.clock-base{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 277px;
+    height: 277px;
+    opacity: 0;
+    position: absolute;
+    background-color: transparent;
+    border: 3px solid #00ff00;
+    border-radius: 50%;
+    animation: suave 1.7s ease-in-out forwards; 
+    transition: 0.7s;  
+}
+
+.clock-base:hover{
+    box-shadow: 0 0 1em #00FF00;
+}
+
+.ponteiro-1{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    left: 198px;
+    top: 17px;
+    transform: rotate(33deg);
+    
+}
+
+.ponteiro-2{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    left: 244px;
+    top: 62px;
+    transform: rotate(58deg);
+    
+}
+
+.ponteiro-3{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    left: 261px;
+    top: 126.4px;
+    transform: rotate(90deg);
+    
+}
+
+.ponteiro-4{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    left: 244px;
+    top: 189.4px;
+    transform: rotate(-58deg);
+    
+}
+
+.ponteiro-5{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    left: 198px;
+    top: 237px;
+    transform: rotate(-33deg);
+    
+}
+
+.ponteiro-6{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    top: 254px;
+    left: 133.5px;
+    
+}
+
+.ponteiro-7{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    right: 198px;
+    top: 237px;
+    transform: rotate(33deg);
+    
+}
+
+.ponteiro-8{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    right: 244px;
+    top: 189.4px;
+    transform: rotate(58deg);
+    
+}
+
+.ponteiro-9{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    right: 261px;
+    top: 126.4px;
+    transform: rotate(90deg);
+    
+}
+
+.ponteiro-10{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    right: 244px;
+    top: 63px;
+    transform: rotate(-58deg);
+    
+}
+
+.ponteiro-11{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    right: 198px;
+    top: 17px;
+    transform: rotate(-33deg);
+    
+}
+
+.ponteiro-12{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: #00ff00;
+    top: 0;
+    left: 133.5px;
+    
+}
+.box-ponteiro-sec{
+    position: absolute;
+    border-radius: 50%;
+    width: 277px;
+    height: 277px;
+}
+
+.ponteiro-sec{
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    background-color: #00ff00;
+    right: 137px;
+    margin-top: 14%;
+    box-shadow: 0 0 1em #00ff00;
+}
+
+.box-ponteiro-min{
+    position: absolute;
+    width: 277px;
+    height: 277px;
+    background-color: transparent;
+    animation: min 3600s linear infinite;   
+}
+
+.ponteiro-min{
+    position: absolute;
+    width: 3px;
+    height: 100px;
+    background-color: #00ff00;
+    right: 137px;
+    margin-top: 14%;
+}
+
+.box-ponteiro-hour{
+    position: absolute;
+    width: 277px;
+    height: 277px;
+    background-color: transparent;
+    animation: hour 43200s linear infinite;
+    
+}
+.ponteiro-hour{
+    position: absolute;
+    width: 5px;
+    height: 100px;
+    background-color: #00ff00;
+    right: 137px;
+    margin-top: 14%; 
+}
+
+
+@keyframes min {
+    to{
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes hour {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes suave {
+    to{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LightFont';
+    src: url('fonts/Coves\ Light.otf');
+}
+
+@font-face {
+    font-family: 'BoldFont';
+    src: url('fonts/Coves\ Bold.otf');
+}
+
+:root{
+    --fontlight:'LightFont', sans-serif;
+    --fontbold:'BoldFont', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontlight);   
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+header{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    scroll-behavior: smooth;
+    
+    
+}
+
+.navigation > a {
+    font-size: 1.3em;
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+    
+}
+
+.navigation > a:hover{
+    color: #00ff00;
+    
+}
+
+header > img:hover{
+    animation: fly 2s infinite alternate ease-in-out;
+}
+
+
+body{
+    font-size: 1em;
+    overflow-x: hidden;
+    background-image: url('imagens/bg-black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+    
+}
+
+
+
+@keyframes fly {
+    
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-10%);
+    }
+}
+
+
+
+.menu-burguer{
+    display: none;
+}
+
+
+/*HEADER CONCLUÍDO*/
+
+.welcomeMain {
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    
+    
+    
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 60vh;
+   
+}
+.welcome-text {
+    font-family: var(--fontlight);
+    color: white;
+    font-size: 2em;
+}
+.name {
+    font-family: var(--fontbold);
+    font-size: 7em;
+    color: white;
+    transition: 0.7s;
+}
+.name:hover{
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00ff00;
+    text-shadow: 0 0 1em #00ff00;
+}
+
+
+/*BOAS VINDAS CONCLUÍDO*/
+
+.effects{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    padding: 5vw;
+    width: 50vw;
+    height: 60vh;
+}
+
+.effects-size{
+    position: absolute;
+    border-radius: 70px;
+    height: 30vh;
+    width: 1.7vw;
+    background-color: transparent;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 1em #00FF00;
+    transition: 0.7s;
+}
+
+.effects-size:hover{
+    background-color: #00ff00;
+}
+
+.effect1 {
+    animation: effect1 5s alternate ease-in-out infinite;
+    margin-right: 5vw;
+    margin-top: 45vh;
+}
+
+.effect2 {
+    animation: effect2 5s alternate ease-in-out infinite;
+    margin-right: 15vw;
+    margin-bottom: 25vh;
+}
+
+.effect3 {
+    animation: effect3 3s alternate ease-in-out infinite;
+    margin-top: 50vh;
+    margin-right: 25vw;
+}
+
+
+@keyframes effect1 {
+    to{
+        transform: translateY(-37vh);
+        height: 27px;
+    }
+}
+
+@keyframes effect2 {
+    to{
+        transform: translateY(40vh);
+        height: 80px;
+    }
+}
+
+@keyframes effect3 {
+    to{
+        transform: translateY(-40vh);
+        height: 130px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.projects {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+
+}
+
+.projectsbtn{
+    border: 2px solid #00ff00;
+    padding: 15px 50px;
+    background-color: transparent;
+    font-weight: bolder;
+    color: #00ff00;
+    border-radius: 17px;
+    transition: 0.7s;
+    
+}
+
+
+.projectsbtn:hover {
+    box-shadow: 0 0 1em #00ff00;
+    animation: btnAnimate 0.7s infinite alternate linear;
+}
+
+
+
+@keyframes btnAnimate {
+    to{
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    
+    header{
+        font-size: 0.7em;
+    }
+    header > img {
+      width: 109.5px;
+      height: 48px;
+    }
+    .navigation {
+        display: none;
+    }
+
+    .menu-burguer {
+        display: flex;
+    }
+    .menu-burguer > button {
+       border: none;
+       margin-right: -7px;
+       width: 47px;
+       height: 47px;
+       background-color: transparent;
+       cursor: pointer;
+    
+    }
+    .bar {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: white;
+        margin: 7px;
+        transition: 0.7s;
+        transform-origin: center;
+        
+    }
+    
+    .welcomeMain{
+        display: block;
+    }
+    /*HEADER CONCLUÍDO*/
+    .welcome-text {
+        width: 70vw;
+    }
+    .name {
+        font-size: 5em;
+    }
+    .welcome{
+        margin: auto;
+        text-align: center;
+    }
+
+    .effects {
+        display: none;
+        margin: auto;
+    }
+  }

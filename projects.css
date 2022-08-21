@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'LightFont';
+    src: url('fonts/Coves\ Light.otf');
+}
+
+@font-face {
+    font-family: 'BoldFont';
+    src: url('fonts/Coves\ Bold.otf');
+}
+
+:root{
+    --fontlight:'LightFont', sans-serif;
+    --fontbold:'BoldFont', sans-serif;
+}
+
+.projects-title{
+    font-family: var(--fontbold);
+}
+#projectsMain{
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    height: 100vh;
+}
+#projectsMain > h1{
+    height: 15vh;
+}
+
+.projectsBackground{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 80vh;
+    padding: 5vw;
+
+}
+.projectsBackground > div{
+    margin: 5px;
+}
+
+.projects-styles{
+    border-radius: 7px;
+    transition: 0.7s;
+}
+
+.projects-styles:hover{
+    box-shadow: 0 0 1em #00ff00;
+}
+
+.imgprojects {
+    margin: 7px;
+    border: 1px solid #00ff00;
+}
+
+a{
+    text-decoration: none;
+}
+
+.project1 {
+    background-color: transparent;
+    border: 3px solid #00ff00;
+    border-radius: 7px;
+    height: 60vh;
+    margin: auto;
+}
+
+
+.project2 {
+    background-color: transparent;
+    border: 3px solid #00ff00;
+    border-radius: 7px;
+    height: 60vh;
+    margin: auto;
+}
+
+.project3 {
+    background-color: transparent;
+    border: 3px solid #00ff00;
+    border-radius: 7px;
+    height: 60vh;
+    margin: auto;
+}
+
+.project4 {
+    background-color: transparent;
+    border: 3px solid #00ff00;
+    border-radius: 7px;
+    height: 60vh;
+    margin: auto;
+}
+
+
+.nameProjects{
+    font-family: var(--fontbold);
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00ff00;
+    
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .projectsBackground{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin: 10vw;
+    }
+    .projects-styles > div{
+        margin-bottom: 3vh;
+    }
+  }
